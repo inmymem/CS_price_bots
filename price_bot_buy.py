@@ -351,7 +351,11 @@ class lbc:
 #         return get_btcaverage_gbp_last()
 #     return result
 def get_btcaverage_gbp_last():
-    latest_price = requests.get(url='https://www.cryptostrat.co.uk/reference_price/gbp').json()
+    try:
+        latest_price = requests.get(url='https://www.cryptostrat.co.uk/reference_price/gbp').json()
+    except:
+        time.sleep(2)
+        get_btcaverage_gbp_last()
     return latest_price
 class telegram:
     def requests(GET_POST, method, parameters):
