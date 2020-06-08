@@ -303,7 +303,7 @@ def process_commands():
 
 
 allowed_users = [User(188606593,'inmymem'), User(163483123,'Topogetcrypto')]
-allowed_chats = [-394864872, -443832414, -486616574, -467354397] # -333638319
+allowed_chats = [-457290542, -394864872, -443832414, -343491942, -486616574, -467354397] # -333638319
 
 updates = request('GET', 'getUpdates', None).json()
 print(updates)
