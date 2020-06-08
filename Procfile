@@ -1,1 +1,1 @@
-worker: python price_bot_buy.py & python price_bot_sell.py
+worker: celery -A tasks beat -l info
