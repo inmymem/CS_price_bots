@@ -254,9 +254,6 @@ def ad_process(ad_number):
             }
     mysql_cursor.close()
     mydb.close()
-    print(parameters['is_bot_active'])
-    if parameters['is_bot_active']  == 'True':
-        print('Hiiiiiiiiiiiiiiiiiiiiiii')
     if parameters['is_bot_active'] == 'True':
         spot_price = get_btcaverage_gbp_last()
         if parameters['action'].lower() == 'sell':   #convert buy_sell to get the ads list because for the broker selling the localbitcoins page is buying
