@@ -41,16 +41,16 @@ def process_localbitcoins_CS_Buy_ad_1194149():
 
 
 app.conf.beat_schedule = {
-    'get-telegram-commands-every-30-seconds': {
+    'get-telegram-commands-every-10-seconds': {
         'task': 'tasks.process_telegram',
         'schedule': 10.0,
         'args': ()
     },
-    # 'update-localbitcoins-sell-1193986': {
-    #     'task': 'tasks.process_localbitcoins_CS_Sell_ad_1193986',
-    #     'schedule': 5.0,
-    #     'args': ()
-    # },
+    'update-localbitcoins-sell-1193986': {
+        'task': 'tasks.process_localbitcoins_CS_Sell_ad_1193986',
+        'schedule': 5.0,
+        'args': ()
+    },
     'update-localbitcoins-sell-1194070': {
         'task': 'tasks.process_localbitcoins_CS_Sell_ad_1194070',
         'schedule': 5.0,
@@ -61,11 +61,11 @@ app.conf.beat_schedule = {
         'schedule': 5.0,
         'args': ()
     },
-    # 'update-localbitcoins-buy-1194095': {
-    #     'task': 'tasks.process_localbitcoins_CS_Buy_ad_1194095',
-    #     'schedule': 5.0,
-    #     'args': ()
-    # },
+    'update-localbitcoins-buy-1194095': {
+        'task': 'tasks.process_localbitcoins_CS_Buy_ad_1194095',
+        'schedule': 5.0,
+        'args': ()
+    },
     'update-localbitcoins-buy-1194098': {
         'task': 'tasks.process_localbitcoins_CS_Buy_ad_1194098',
         'schedule': 5.0,
