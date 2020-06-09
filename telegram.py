@@ -302,7 +302,7 @@ def process_commands():
         update_parameters(parameters, mysql_cursor, mydb)
 
 
-allowed_users = [User(188606593,'inmymem'), User(163483123,'Topogetcrypto')]
+allowed_users = [User(188606593,'inmymem'), User(163483123,'Topogetcrypto'), User(731754853, 'CryptoStrat')]
 allowed_chats = [-457290542, -394864872, -443832414, -343491942, -486616574, -467354397] # -333638319
 
 updates = request('GET', 'getUpdates', None).json()

@@ -8,7 +8,7 @@ verify_ssl = true
 [packages]
 requests = "*"
 prettytable = "*"
-celery = "*"
+celery = {extras = ["redis"],version = "*"}
 future = "*"
 mysql-connector-python = "*"
 

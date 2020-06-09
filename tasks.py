@@ -3,9 +3,13 @@ import os
 from telegram import process_commands
 from lbc import ad_process
 
-CELERY_BROKER_URL = os.environ.get('CLOUDAMQP_URL')
+CELERY_BROKER_URL = os.environ.get('REDISCLOUD_URL')
 
 app = Celery('price_bot', backend='amqp', broker=CELERY_BROKER_URL)
+
+#app.conf.broker_transport_options = {'visibility_timeout': 60}  # 1 minute.
+app.conf.broker_transport_options = {'fanout_prefix': True}
+app.conf.broker_transport_options = {'fanout_patterns': True}
 
 
 timezone = 'Europe/London'
