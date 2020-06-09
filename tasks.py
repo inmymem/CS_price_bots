@@ -66,22 +66,22 @@ app.conf.beat_schedule = {
         #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
         # }
     },
-    'update-localbitcoins-sell-1194070': {
-        'task': 'tasks.process_localbitcoins_CS_Sell_ad_1194070',
-        'schedule': 5.0,
-        'args': (),
-        # 'options': {
-        #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
-        # }
-    },
-    'update-localbitcoins-sell-1194076': {
-        'task': 'tasks.process_localbitcoins_CS_Sell_ad_1194076',
-        'schedule': 5.0,
-        'args': (),
-        # 'options': {
-        #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
-        # }
-    },
+    # 'update-localbitcoins-sell-1194070': {
+    #     'task': 'tasks.process_localbitcoins_CS_Sell_ad_1194070',
+    #     'schedule': 5.0,
+    #     'args': (),
+    #     # 'options': {
+    #     #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
+    #     # }
+    # },
+    # 'update-localbitcoins-sell-1194076': {
+    #     'task': 'tasks.process_localbitcoins_CS_Sell_ad_1194076',
+    #     'schedule': 5.0,
+    #     'args': (),
+    #     # 'options': {
+    #     #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
+    #     # }
+    # },
     'update-localbitcoins-buy-1194095': {
         'task': 'tasks.process_localbitcoins_CS_Buy_ad_1194095',
         'schedule': 5.0,
@@ -90,20 +90,20 @@ app.conf.beat_schedule = {
         #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
         # }
     },
-    'update-localbitcoins-buy-1194098': {
-        'task': 'tasks.process_localbitcoins_CS_Buy_ad_1194098',
-        'schedule': 5.0,
-        'args': (),
-        # 'options': {
-        #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
-        # }
-    },
-    'update-localbitcoins-sell-1194149': {
-        'task': 'tasks.process_localbitcoins_CS_Buy_ad_1194149',
-        'schedule': 5.0,
-        'args': (),
-        # 'options': {
-        #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
-        # }
+    # 'update-localbitcoins-buy-1194098': {
+    #     'task': 'tasks.process_localbitcoins_CS_Buy_ad_1194098',
+    #     'schedule': 5.0,
+    #     'args': (),
+    #     # 'options': {
+    #     #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
+    #     # }
+    # },
+    # 'update-localbitcoins-sell-1194149': {
+    #     'task': 'tasks.process_localbitcoins_CS_Buy_ad_1194149',
+    #     'schedule': 5.0,
+    #     'args': (),
+    #     # 'options': {
+    #     #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
+    #     # }
     },
 }
