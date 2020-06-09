@@ -210,7 +210,7 @@ def process_commands():
         global_best_price = float(parameters['ad_price'])
         if command.instruction == 'status':
             bot_status = 'Inactive'
-            if parameters["is_bot_active"]:
+            if parameters["is_bot_active"] == 'True':
                 bot_status = 'Active'
             message = f'*{parameters["account"]} {parameters["action"]} Bot *_({bot_status})_:\nMinimum Trade Count: *{parameters["minimum_trade_count"]} trades*\nMinimum Max Amount: *{parameters["minimum_max_amount"]} GBP*\nMaximum Min Amount: *{parameters["maximum_min_amount"]} GBP*\nMinimum Margin: *{parameters["minimum_margin"]} GBP*\nMaximum Margin: *{parameters["maximum_margin"]}%*\nUndercut: *{parameters["undercut"]} GBP*\nMaximum Minutes since active: *{parameters["max_minutes_since_active"]} minutes*\n\nSpot Price: *{global_spot_price} GBP*\n{parameters["action"]}ing at: *{global_best_price} GBP*\nMargin: *{round(abs(global_best_price-global_spot_price),2)} GBP / {round(100*abs(global_best_price-global_spot_price)/global_spot_price,2)}%*'
             send_message(command.chat_id, message)
