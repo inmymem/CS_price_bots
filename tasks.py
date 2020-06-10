@@ -105,5 +105,5 @@ app.conf.beat_schedule = {
     #     # 'options': {
     #     #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
     #     # }
-    },
+    # },
 }
