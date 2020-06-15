@@ -60,7 +60,7 @@ app.conf.beat_schedule = {
     },
     'update-localbitcoins-sell-1193986': {
         'task': 'tasks.process_localbitcoins_CS_Sell_ad_1193986',
-        'schedule': 3.0,
+        'schedule': 5.0,
         'args': (),
         # 'options': {
         #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
@@ -84,7 +84,7 @@ app.conf.beat_schedule = {
     # },
     'update-localbitcoins-buy-1194095': {
         'task': 'tasks.process_localbitcoins_CS_Buy_ad_1194095',
-        'schedule': 3.0,
+        'schedule': 5.0,
         'args': (),
         # 'options': {
         #     'expires': datetime.datetime.utcnow() + datetime.timedelta(seconds=45),
