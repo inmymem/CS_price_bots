@@ -251,16 +251,13 @@ def ad_process(ad_number):
     mysql_cursor.close()
     mydb.close()
     previous_price = parameters['ad_price']
-    #print(f'previous ad priceee =  {previous_price}')
     if parameters['is_bot_active'] == 'True':
         spot_price = get_btcaverage_gbp_last()
         if parameters['action'].lower() == 'sell':   #convert buy_sell to get the ads list because for the broker selling the localbitcoins page is buying
             buy_sell = 'buy'
         elif parameters['action'].lower() == 'buy':
             buy_sell = 'sell'
-        #print('start')
         ad_list = get_national_bank_ad_list(buy_sell,'GBP')
-        #print('end')
         filtered_data = filter_ad_list(ad_list, parameters['not_follow_list'], parameters['minimum_trade_count'], parameters['minimum_max_amount'], parameters['maximum_min_amount'], parameters['max_minutes_since_active'])
         best_price= get_best_price(filtered_data, parameters['minimum_margin'], parameters['maximum_margin'], parameters['undercut'], spot_price, buy_sell)
         if best_price != previous_price:
@@ -270,9 +267,9 @@ def ad_process(ad_number):
         for ad in filtered_data:
             table.add_row([ad.username, round(ad.trade_count), ad.price,ad.min_amount, ad.max_amount, ad.last_seen_diff()])
         update_row_sql = f"UPDATE price_bots SET ad_price = {best_price} WHERE ad_number ={str(ad_number)}"
-        #print(table)
-        #print(f'selling at {best_price}')
-        #print(f'previous ad priceee =  {previous_price}')
+        print(table)
+        print(f'selling at {best_price}')
+        print(f'previous ad priceee =  {previous_price}')
         mydb = mysql.connector.connect(
             host = mysql_host,
             user = mysql_user,
@@ -285,3 +282,6 @@ def ad_process(ad_number):
         mysql_cursor.close()
         mydb.close()
     #return {'table': table, 'price': best_price}
+
+#print('hi')
+#ad_process(1193986)

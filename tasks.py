@@ -18,6 +18,9 @@ app.conf.enable_utc = True
 app.conf.timezone = 'UTC'
 #app.conf.broker_pool_limit = 20
 app.conf.redis_max_connections = 90
+#app.conf.worker_concurrency = 3
+app.conf.worker_concurrency = 1
+app.conf.worker_prefetch_multiplier = 1
 # timezone = 'Europe/London'
 
 sell_ads = [1193986, 1194070, 1194076]

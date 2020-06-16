@@ -1,1 +1,9 @@
 worker: celery -A tasks beat -l info
+worker0: celery -A tasks worker -l info
+worker1: celery -A tasks worker -l info
+worker2: celery -A tasks worker -l info
+worker3: celery -A tasks worker -l info
+worker4: celery -A tasks worker -l info
+worker5: celery -A tasks worker -l info
+worker6: celery -A tasks worker -l info
+worker7: celery -A tasks worker -l info
