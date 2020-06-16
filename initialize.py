@@ -193,7 +193,6 @@ parameterss = {
         'ad_list_stream' : myresult[15],
         'ad_price' : myresult[16],
         }
-print(parameterss['not_follow_list'])
 
 def update_parameters(parameters):
     update_row_sql = f"UPDATE price_bots SET " #address = 'Canyon 123' WHERE chat_id ={str(-394864872)}"
@@ -239,7 +238,6 @@ def update_parameters(parameters):
 # insert_default(mycursor)
 
 
-"""Use one telegram bot. Depending on chat id, load and change different mysql columns"""
 
 # #create table
 # mycursor.execute("CREATE TABLE price_bots (id INT AUTO_INCREMENT PRIMARY KEY, chat_id VARCHAR(255), ad_number VARCHAR(255), action VARCHAR(255), not_follow_list TEXT, minimum_trade_count VARCHAR(255), minimum_max_amount VARCHAR(255), maximum_min_amount VARCHAR(255), minimum_margin VARCHAR(255), max_minutes_since_active VARCHAR(255), is_bot_active VARCHAR(255), tele_bot_refresh_seconds VARCHAR(255), ad_list_stream VARCHAR(255))")
